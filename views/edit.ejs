@@ -1,0 +1,43 @@
+<!-- Header  Section -->
+<%- include('./partials/header.ejs')  %>
+
+<!-- Body  Section -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 mt-3">
+      <h2 class="alert alert-success text-center">Update Students</h2>
+      <form method="post" action="/student/update/<%= result._id  %>">
+        
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" value="<%= result.name  %>">
+        </div>
+        <div class="mb-3">
+          <label for="age" class="form-label">Age</label>
+          <input type="text" class="form-control" id="age" name="age" value="<%= result.age  %>">
+        </div>
+        <div class="mb-3">
+          <label for="fees" class="form-label">Fees</label>
+          <input type="text" class="form-control" id="fees" name="fees" value="<%= result.fees  %>">
+        </div>
+        <button type="submit" class="btn btn-warning">Submit</button>
+        <button type="submit" class="btn btn-dark">Back To Home</button>
+      </form>
+    </div>
+    
+  </div>
+</div>
+
+
+ 
+
+
+
+<!-- Includ Static Files -->
+  <script src="/js/bootstrap.bundle.js"></script>
+
+
+<!-- Footer Section -->
+<%- include('./partials/footer.ejs')  %>
